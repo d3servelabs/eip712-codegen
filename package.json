@@ -9,7 +9,8 @@
   "types": "./index.d.ts",
   "scripts": {
     "test": "mocha --timeout 10000",
-    "build": "npx tsc index.ts --downlevelIteration --declaration"
+    "build": "npx tsc index.ts --downlevelIteration --declaration",
+    "sample": "node cli.js --input sampleTypes.js --entryPoints ReplayProtection > ReplayProtection.sol"
   },
   "repository": {
     "type": "git",
