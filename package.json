@@ -1,7 +1,7 @@
 {
   "name": "eip712-codegen",
-  "version": "6.0.8",
-  "description": "A utility for generating Solidity code for recovering signatures using the EIP-712 signTypedData schema.",
+  "version": "6.0.8-patch1",
+  "description": "A utility for generating Solidity code for recovering signatures using the EIP-712 signTypedData schema. Originally created by Dan Finlay",
   "main": "index.js",
   "bin": {
     "eip712-codegen": "./cli.js"
@@ -25,7 +25,7 @@
     "web3",
     "MetaMask"
   ],
-  "author": "Dan Finlay <dan@danfinlay.com>",
+  "author": "D3Serve Labs <dev-team@d3serve.xyz>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/danfinlay/eip712-codegen/issues"

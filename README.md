@@ -1,6 +1,5 @@
 # EIP 712 Codegen
-This module aims to automate the hard parts of using EIP-712
-
+This module aims to automate the hard parts of using EIP-712, forked by D3Serve Labs from Dan Finlay's [`eip712-codegen@6.0.8`(permlink)](https://github.com/danfinlay/eip712-codegen/tree/73b411e83250755c2a1bd068d9f5eaf7b42be039).
 
 [EIP 712: Sign Typed Data](https://eips.ethereum.org/EIPS/eip-712) as of 2023 is the most human-readable way of getting signatures from user that are easily parsed into solidity structs.
 
@@ -108,3 +107,9 @@ The `Signed{Type}` struct format looks like this:
 ```
 For regular EOA signatures, the signer should be set to the zero address (`0x0000000000000000000000000000000000000000`).
 If the `signer` value is set to anything other than the zero address, rather than recover a signature normally, the contract will execute [EIP-1271 style signature recovery](https://eips.ethereum.org/EIPS/eip-1271) which allows contract accounts to perform custom verification logic allowing them to effectively "sign" messages like an EOA does.
+
+## Credit
+
+This tool is originally created by Dan Finlay shared at https://github.com/danfinlay/eip712-codegen. We created this package for our own usage and accelerate the update.
+Once original `danfinlay/eip712-codegen` accepts major patches from us, we might deprecated this repo.
+
