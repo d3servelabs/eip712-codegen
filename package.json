@@ -1,6 +1,6 @@
 {
   "name": "@d3serve/eip712-codegen",
-  "version": "6.0.8-patch1",
+  "version": "6.0.8-patch2",
   "description": "A utility for generating Solidity code for recovering signatures using the EIP-712 signTypedData schema. Originally created by Dan Finlay",
   "main": "index.js",
   "bin": {
