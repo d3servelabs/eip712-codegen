@@ -101,7 +101,7 @@ function getSignedFooTypePacketHash (SignedFooType memory _input) public pure re
 }
 
 
-function getEip712DomainPacketHash (EIP712Domain memory _input) public pure returns (bytes32) {
+function getEip_712DomainPacketHash (EIP712Domain memory _input) public pure returns (bytes32) {
   bytes memory encoded = abi.encode(
     eip712DomainTypehash,
     keccak256(bytes(_input.name)),

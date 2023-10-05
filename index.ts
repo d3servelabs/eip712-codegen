@@ -258,13 +258,15 @@ function getEncodedValueFor (field: {
 }
 
 function packetHashGetterName (typeName) {
+  let ret;
   if (typeName === 'EIP712Domain') {
-    return camelCase('GET_EIP_712_DOMAIN_PACKET_HASH');
+    ret = camelCase('GET_EIP_712_DOMAIN_PACKET_HASH');
   }
   if (typeName.includes('[]')) {
-    return camelCase(`GET_${snakeCase(typeName.substr(0, typeName.length - 2)).toUpperCase()}_ARRAY_PACKET_HASH`);
+    ret = camelCase(`GET_${snakeCase(typeName.substr(0, typeName.length - 2)).toUpperCase()}_ARRAY_PACKET_HASH`);
   }
-  return camelCase(`GET_${snakeCase(typeName).toUpperCase()}_PACKET_HASH`);
+  else ret = camelCase(`GET_${snakeCase(typeName).toUpperCase()}_PACKET_HASH`);
+  return ret;
 }
 
 /**

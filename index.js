@@ -127,13 +127,16 @@ function getEncodedValueFor(field) {
     return "".concat(packetHashGetterName(field.type), "(_input.").concat(field.name, ")");
 }
 function packetHashGetterName(typeName) {
+    var ret;
     if (typeName === 'EIP712Domain') {
-        return (0, change_case_all_1.camelCase)('GET_EIP_712_DOMAIN_PACKET_HASH');
+        ret = (0, change_case_all_1.camelCase)('GET_EIP_712_DOMAIN_PACKET_HASH');
     }
     if (typeName.includes('[]')) {
-        return (0, change_case_all_1.camelCase)("GET_".concat((0, change_case_all_1.snakeCase)(typeName.substr(0, typeName.length - 2)).toUpperCase(), "_ARRAY_PACKET_HASH"));
+        ret = (0, change_case_all_1.camelCase)("GET_".concat((0, change_case_all_1.snakeCase)(typeName.substr(0, typeName.length - 2)).toUpperCase(), "_ARRAY_PACKET_HASH"));
     }
-    return (0, change_case_all_1.camelCase)("GET_".concat((0, change_case_all_1.snakeCase)(typeName).toUpperCase(), "_PACKET_HASH"));
+    else
+        ret = (0, change_case_all_1.camelCase)("GET_".concat((0, change_case_all_1.snakeCase)(typeName).toUpperCase(), "_PACKET_HASH"));
+    return ret;
 }
 /**
  * For encoding arrays of structs.
